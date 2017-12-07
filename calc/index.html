@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Cost Form</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+     <div class="web_design_box">
+         <form>
+             <h3>Total cost calculation</h3><br>
+             <div class="form-group">
+                 <label>Ingredient</label>
+                 <select class="form-control" id="ingredient" onchange="finalCost()">
+                     <option value="0">Select ingredient</option>
+                     <option value="22"> White Truffle </option>
+                     <option value="47"> Saffron </option>
+                     <option value="10"> Caviar </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Unit of measurement</label>
+                 <select class="form-control" id="unit" onchange="finalCost()">
+                  <option value="0">Select unit</option>
+                  <option value="28"> Ounces </option>
+                  <option value="1"> Grams </option>
+              </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of servings</label>
+                 <input type="number" class="form-control" id="servings" value="0" placeholder="How many servings will you have?" onkeyup="finalCost()">
+             </div><br>
+             <div class="form-group">
+              <label>Amount</label>
+              <input type="number" class="form-control" id="amount" value="0" placeholder="How much of this ingredient do you need to use?" onkeyup="finalCost()">
+            </div><br>
+             <div class="form-group">
+                 <label>Total cost per serving ($) : </label>
+                 <span id="result" style="background-color: #31418f;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+             </div>
+         </form>
+     </div>
+     <script src="assets/main.js"></script>
+</body>
+</html>
